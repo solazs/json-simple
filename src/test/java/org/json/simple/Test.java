@@ -302,7 +302,8 @@ public class Test extends TestCase{
 		array1.add("abc\u0010a/");
 		array1.add(new Integer(123));
 		array1.add(new Double(222.123));
-		array1.add(new Boolean(true));
+		// Uses less memory than new Boolean(), amount saved is about a byte, but it's JVM dependent.
+		array1.add(true);
 		System.out.println("======array1==========");
 		System.out.println(array1);
 		System.out.println();
